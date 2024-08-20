@@ -7,18 +7,18 @@
     <body>
         <h1>CGPA Caluculator</h1>
         <label id="sem1" >Sem_1:</label>
-        <input type="number" step="0.01" id="cdpa1"/><br/>
+        <input type="number" step="0.01" id="cdpa1" min="0" max="10"/><br/>
         <label id="sem2" >Sem_2:</label>
-        <input type="number" step="0.01" id="cdpa2"/><br/>
+        <input type="number" step="0.01" id="cdpa2"  min="0" max="10"/><br/>
         <label id="sem3" >Sem_3:</label>
-        <input type="number" step="0.01" id="cdpa3"/><br/>
+        <input type="number" step="0.01" id="cdpa3"  min="0" max="10"/><br/>
         <label id="sem4" >Sem_4:</label>
-        <input type="number" step="0.01" id="cdpa4"/><br/>
+        <input type="number" step="0.01" id="cdpa4"  min="0" max="10"/><br/>
         <label id="sem5" >Sem_5:</label>
-        <input type="number" step="0.01" id="cdpa5"/><br/>
+        <input type="number" step="0.01" id="cdpa5"  min="0" max="10"/><br/>
         <label id="sem6" >Sem_6:</label>
-        <input type="number" step="0.01" id="cdpa6"/><br/>
-        <input type="button" value="caluculate" onclick="cal_cdpa()"/>
+        <input type="number" step="0.01" id="cdpa6"  min="0" max="10"/><br/>
+        <button type="button" onclick="cal_cgpa()">caluculate</button>
         <p id="res"></p>
         
     </body>
@@ -31,10 +31,9 @@
         var cgpa_4=parseFloat(document.getElementById("cgpa4"));
         var cgpa_5=parseFloat(document.getElementById("cgpa5"));
         var cgpa_6=parseFloat(document.getElementById("cgpa6"));
-        var result=parseFloat((cgpa_1+cgpa_2+cgpa_3+cgpa_4+cgpa_5+cgpa_6)/6);
-
+        result=parseFloat(cgpa_1+cgpa_2+cgpa_3+cgpa_4+cgpa_5+cgpa_6);
+        document.getElementById("res").innerHTML=result;
     }
-    document.getElementById("res").innerHTML = cal_cgpa();
     </script>
 
 
