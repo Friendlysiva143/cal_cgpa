@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title>
+            sample lab 1
+        </title>
+    </head>
+    <body>
+        <h1>CGPA Caluculator</h1>
+        <label id="sem1" >Sem_1:</label>
+        <input type="number" step="0.01" id="cdpa1"/><br/>
+        <label id="sem2" >Sem_2:</label>
+        <input type="number" step="0.01" id="cdpa2"/><br/>
+        <label id="sem3" >Sem_3:</label>
+        <input type="number" step="0.01" id="cdpa3"/><br/>
+        <label id="sem4" >Sem_4:</label>
+        <input type="number" step="0.01" id="cdpa4"/><br/>
+        <label id="sem5" >Sem_5:</label>
+        <input type="number" step="0.01" id="cdpa5"/><br/>
+        <label id="sem6" >Sem_6:</label>
+        <input type="number" step="0.01" id="cdpa6"/><br/>
+        <input type="button" value="caluculate" onclick="cal_cdpa()"/>
+        <p id="res"></p>
+        
+    </body>
+    <script>
+        function cal_cgpa()
+    {
+        var cgpa_1=parseFloat(document.getElementById("cgpa1"));
+        var cgpa_2=parseFloat(document.getElementById("cgpa2"));
+        var cgpa_3=parseFloat(document.getElementById("cgpa3"));
+        var cgpa_4=parseFloat(document.getElementById("cgpa4"));
+        var cgpa_5=parseFloat(document.getElementById("cgpa5"));
+        var cgpa_6=parseFloat(document.getElementById("cgpa6"));
+        var result=parseFloat((cgpa_1+cgpa_2+cgpa_3+cgpa_4+cgpa_5+cgpa_6)/6);
+
+    }
+    document.getElementById("res").innerHTML = cal_cgpa();
+    </script>
+
+
+</html>
